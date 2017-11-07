@@ -1,0 +1,31 @@
++ mInicial
+Comenzar a Trabajar  <--
+Descargar Registros
+Configurar
+Apagar
+
++ mDatosIngresar
+Lectura				e1
+Aftosa				e2
+Vientre vacio		e3
+Antiparasitario		e4
+Siguiente <-- Cancelar
+
++ mLotesIdentificar
+Vacias				e1
+Lote A				e2
+Lote B				e3
+Tratamiento 		e4
+Comenzar <-- Cancelar
+
++ mLecturaCaravanas
+Nro caravana: 0000000
+Pais: 000
+Peso: 250 Kg
+Terminar <--
+
++ mInicial
+Comenzar a Trabajar  <--
+Descargar Registros
+Configurar
+Apagar
