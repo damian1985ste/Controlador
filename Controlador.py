@@ -4,9 +4,12 @@ import sys
 sys.path.append('../')
 from Vistas.Vistas import vistas
 from Drivers.interfaz import interfazDR
+from Modelo.modelo import modelo
 
 per=interfazDR() # conexion a perifericos
 v=vistas(per.disp) # conexion a vistas
+m=modelo()
+
 class controlador:
 	def __init__(self):
 		L=cLectura()
@@ -61,7 +64,6 @@ class controlador:
 									sel3='1'
 									btn3=False
 									btnsel=False
-									carav=('000','000000000')
 									m_op3=''
 									while m_op3!='X':
 										print('prog.py - linea 77 -> Menu comenzar a trabjar - Lee caravanas: boton'+str(btn3)+'  rotary sel3: '+str(sel3))
@@ -110,8 +112,8 @@ class cLectura:
 	def mInicial(self, sel=1):
 		'''Esta funcion realiza el trabajo necesario para presentar 
 		pantalla el menu inicial'''
-		wifi=True # consultar a base de datos configuracion
-		BT=True # consultar a base de datos configuracion
+		wifi=m.cfg.wifi # consultar a base de datos configuracion
+		BT=m.cfg.bt # consultar a base de datos configuracion
 		op=['Comenzar a Trabajar', 'Descargar Registros','Configurar','Apagar']
 		v.imp_menu_op(op,sel,wifi,BT)
 		return(len(op))
